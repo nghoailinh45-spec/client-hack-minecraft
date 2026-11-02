@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng - MineShopee</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛏️</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="cart">
+  <noscript>
+    <div style="background:#dc2626;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;text-align:center;font-size:14px">
+      <strong>⚠ JavaScript đang TẮT — website không thể hiển thị.</strong><br>
+      Hãy bật JavaScript và thử lại. Nếu bạn dùng Tor Browser: vào menu ⚙ → Security → chọn <em>Standard</em> (không dùng <em>Safest</em>), hoặc mở bằng Chrome/Edge.<br>
+      JavaScript is OFF. MineShopee requires JavaScript. In Tor Browser set Security Level to &quot;Standard&quot;, or use Chrome/Edge.
+    </div>
+  </noscript>
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a><span class="sep">/</span><span>Giỏ hàng</span>
+      </div>
+
+      <h1 class="page-title"><span id="cart-title-text">Giỏ hàng</span> <span id="cart-count-label" style="font-size:14px;color:#888;font-weight:400"></span></h1>
+
+      <div id="cart-root"></div>
+
+      <section class="section" id="cart-suggest">
+        <div class="section-head">
+          <div class="section-title" id="cart-suggest-title">Có thể bạn cũng thích</div>
+          <a class="section-more" href="index.html">Xem tất cả →</a>
+        </div>
+        <div class="grid-products" id="cart-suggest-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div class="toast-wrap" id="toast-wrap"></div>
+
+  <!-- Modal thanh toán -->
+  <div class="modal-mask" id="checkout-modal">
+    <div class="modal checkout-modal">
+      <div class="modal-head">
+        <h3 id="checkout-title">Thông tin đặt hàng</h3>
+        <button class="modal-close" type="button" aria-label="Đóng">✕</button>
+      </div>
+      <div class="modal-body" id="checkout-body"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/guard.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>

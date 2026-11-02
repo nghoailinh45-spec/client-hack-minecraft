@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đơn mua của tôi - MineShopee</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛏️</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .order-tabs { display: flex; gap: 6px; background: #fff; border-radius: var(--radius); padding: 6px; box-shadow: var(--shadow); margin-bottom: 14px; overflow-x: auto; }
+    .order-tabs button { flex: 1; min-width: 110px; border: 0; background: none; padding: 10px; border-radius: 6px; font-size: 13px; color: #555; white-space: nowrap; }
+    .order-tabs button.active { background: var(--primary-soft); color: var(--primary); font-weight: 700; }
+    .order-tabs button:hover { background: #fafafa; }
+    .status-pill { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; letter-spacing: .3px; }
+    .status-pending { background: #fff4e5; color: #b45309; }
+    .status-done { background: #e8f8f4; color: #0f766e; }
+    .status-cancel { background: #f3f4f6; color: #6b7280; }
+    .order-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  </style>
+</head>
+<body data-page="orders">
+  <noscript>
+    <div style="background:#dc2626;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;text-align:center;font-size:14px">
+      <strong>⚠ JavaScript đang TẮT — website không thể hiển thị.</strong><br>
+      Hãy bật JavaScript và thử lại. Nếu bạn dùng Tor Browser: vào menu ⚙ → Security → chọn <em>Standard</em> (không dùng <em>Safest</em>), hoặc mở bằng Chrome/Edge.<br>
+      JavaScript is OFF. MineShopee requires JavaScript. In Tor Browser set Security Level to &quot;Standard&quot;, or use Chrome/Edge.
+    </div>
+  </noscript>
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a><span class="sep">/</span><span>Đơn mua của tôi</span>
+      </div>
+
+      <h1 class="page-title" id="orders-title">📦 <span id="orders-title-text">Đơn mua của tôi</span></h1>
+
+      <div class="order-tabs" id="order-tabs">
+        <button class="active" data-status="all" type="button">Tất cả</button>
+        <button data-status="pending" type="button">Chờ xác nhận</button>
+        <button data-status="done" type="button">Hoàn thành</button>
+        <button data-status="cancel" type="button">Đã huỷ</button>
+      </div>
+
+      <div id="orders-root"></div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div class="toast-wrap" id="toast-wrap"></div>
+
+  <script src="assets/js/guard.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/orders.js"></script>
+</body>
+</html>

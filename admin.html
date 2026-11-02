@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Quản trị - MineShopee</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛏️</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="admin">
+  <noscript>
+    <div style="background:#dc2626;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;text-align:center;font-size:14px">
+      <strong>⚠ JavaScript đang TẮT — website không thể hiển thị.</strong><br>
+      Hãy bật JavaScript và thử lại. Nếu bạn dùng Tor Browser: vào menu ⚙ → Security → chọn <em>Standard</em> (không dùng <em>Safest</em>), hoặc mở bằng Chrome/Edge.<br>
+      JavaScript is OFF. MineShopee requires JavaScript. In Tor Browser set Security Level to &quot;Standard&quot;, or use Chrome/Edge.
+    </div>
+  </noscript>
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">🛠️ <span id="admin-title-text">Panel Quản trị MineShopee</span></h1>
+
+      <div class="admin-tabs" id="admin-tabs">
+        <button class="active" data-atab="dash" type="button" data-i18n="admin.tab.dash">Tổng quan</button>
+        <button data-atab="users" type="button" data-i18n="admin.tab.users">Quản lý người dùng</button>
+        <button data-atab="sales" type="button" data-i18n="admin.tab.sales">Thống kê bán hàng</button>
+        <button data-atab="orders" type="button" data-i18n="admin.tab.orders">Quản lý đơn hàng</button>
+      </div>
+
+      <div id="admin-root">
+        <div class="admin-loading" data-i18n="pd.loading">Đang tải...</div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div class="toast-wrap" id="toast-wrap"></div>
+
+  <script src="assets/js/guard.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

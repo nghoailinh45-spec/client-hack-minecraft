@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineShopee - Sàn mua bán Minecraft Client uy tín</title>
+  <meta name="description" content="Mua Minecraft Client PvP, Survival, modpack, cape, skin và tài khoản chính chủ. Giao key tự động, bảo hành 1 đổi 1.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛏️</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <noscript>
+    <div style="background:#dc2626;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;text-align:center;font-size:14px">
+      <strong>⚠ JavaScript đang TẮT — website không thể hiển thị.</strong><br>
+      Hãy bật JavaScript và thử lại. Nếu bạn dùng Tor Browser: vào menu ⚙ → Security → chọn <em>Standard</em> (không dùng <em>Safest</em>), hoặc mở bằng Chrome/Edge.<br>
+      JavaScript is OFF. MineShopee requires JavaScript. In Tor Browser set Security Level to &quot;Standard&quot;, or use Chrome/Edge.
+    </div>
+  </noscript>
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container">
+      <!-- Banner -->
+      <div class="hero-grid">
+        <div class="hero-main">
+          <div class="slides" id="slides"></div>
+          <div class="slider-dots" id="slider-dots"></div>
+        </div>
+        <div class="hero-side">
+          <a class="promo-card" href="index.html?q=fps"
+             style="background:linear-gradient(135deg,#0ea5e9,#1d4ed8)">
+            <h3>Tăng FPS miễn phí</h3>
+            <p>Bộ mod tối ưu cho máy yếu, tăng 40-80% FPS</p>
+            <span class="promo-link">Xem ngay →</span>
+            <span class="promo-emoji">🚀</span>
+          </a>
+          <a class="promo-card" href="index.html?q=combo"
+             style="background:linear-gradient(135deg,#f97316,#dc2626)">
+            <h3>Combo PvP Master</h3>
+            <p>Client VIP + Cape + Modpack, tiết kiệm 57%</p>
+            <span class="promo-link">Săn deal →</span>
+            <span class="promo-emoji">⚔️</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Danh mục nhanh -->
+      <section class="section">
+        <div class="cat-circles" id="cat-circles"></div>
+      </section>
+
+      <!-- Flash sale -->
+      <section class="section" id="flash-section">
+        <div class="flash-sale">
+          <div class="flash-head">
+            <div class="flash-title"><span class="bolt">⚡</span> <span data-i18n="flash.title">Flash Sale</span></div>
+            <div class="countdown">
+              <span class="lbl" data-i18n="flash.endsIn">Kết thúc sau</span>
+              <span class="num" id="cd-h">00</span><span>:</span>
+              <span class="num" id="cd-m">00</span><span>:</span>
+              <span class="num" id="cd-s">00</span>
+            </div>
+            <a class="flash-more" href="index.html?q=flash" data-i18n="flash.viewAll">Xem tất cả →</a>
+          </div>
+          <div class="flash-track" id="flash-track"></div>
+        </div>
+      </section>
+
+      <!-- Voucher -->
+      <section class="section">
+        <div class="voucher-strip" id="voucher-strip"></div>
+      </section>
+
+      <!-- Gợi ý hôm nay -->
+      <section class="section" id="suggest-section">
+        <div class="suggest-head">
+          <div class="suggest-title" id="suggest-title">Gợi ý hôm nay</div>
+          <div class="sorts" id="sorts">
+            <button class="sort-btn active" data-sort="popular" data-i18n="sort.popular">Phổ biến</button>
+            <button class="sort-btn" data-sort="new" data-i18n="sort.new">Mới nhất</button>
+            <button class="sort-btn" data-sort="sold" data-i18n="sort.best">Bán chạy</button>
+            <button class="sort-btn" data-sort="price-asc" data-i18n="sort.low">Giá thấp</button>
+            <button class="sort-btn" data-sort="price-desc" data-i18n="sort.high">Giá cao</button>
+          </div>
+          <div class="filter-wrap">
+            <button class="btn btn-plain" id="filter-toggle" type="button" data-i18n="filter.title">⚙️ Bộ lọc</button>
+            <div class="filter-panel" id="filter-panel">
+              <div class="filter-group">
+                <h4 data-i18n="filter.cat">Danh mục</h4>
+                <div class="filter-chips" id="cat-chips"></div>
+              </div>
+              <div class="filter-group">
+                <h4 data-i18n="filter.price">Khoảng giá (₫)</h4>
+                <div class="price-row">
+                  <input id="price-min" type="number" min="0" step="1000" placeholder="Từ" data-i18n-ph="filter.from">
+                  <span>–</span>
+                  <input id="price-max" type="number" min="0" step="1000" placeholder="Đến" data-i18n-ph="filter.to">
+                </div>
+              </div>
+              <div class="filter-group">
+                <h4 data-i18n="filter.rating">Đánh giá</h4>
+                <div class="filter-chips" id="rate-chips">
+                  <button class="chip" data-rate="5" type="button">5 ★</button>
+                  <button class="chip" data-rate="4" type="button" data-i18n="filter.up4">4 ★ trở lên</button>
+                  <button class="chip" data-rate="3" type="button" data-i18n="filter.up3">3 ★ trở lên</button>
+                </div>
+              </div>
+              <div class="filter-actions">
+                <button class="btn btn-plain" id="filter-reset" type="button" data-i18n="filter.reset">Xoá lọc</button>
+                <button class="btn btn-primary" id="filter-apply" type="button" data-i18n="filter.apply">Áp dụng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-products" id="product-grid"></div>
+        <div class="load-more-wrap" id="load-more-wrap">
+          <button class="load-more" id="load-more" type="button" data-i18n="loadmore">Xem thêm sản phẩm ↓</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div class="toast-wrap" id="toast-wrap"></div>
+
+  <script src="assets/js/guard.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
